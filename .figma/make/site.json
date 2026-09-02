@@ -1,0 +1,10 @@
+{
+  "description": "Offers a modern platform for purchasing filtered water, filtration systems, and water-related products with online ordering tailored for the Pakistani market.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
