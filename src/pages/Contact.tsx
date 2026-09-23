@@ -29,9 +29,9 @@ export default function Contact() {
                 <div className="font-semibold text-[#080f1e]">info@rswaters.store</div>
               </a>
 
-              <a href="mailto:sales@rswaters.store" className="block p-5 bg-white border border-[#cce0f5] rounded-xl hover:border-[#005fc5]/50 transition-colors">
-                <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-wider mb-1">Sales Enquiries</div>
-                <div className="font-semibold text-[#080f1e]">sales@rswaters.store</div>
+              <a href="mailto:info@rswaters.store" className="block p-5 bg-white border border-[#cce0f5] rounded-xl hover:border-[#005fc5]/50 transition-colors">
+                <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-wider mb-1">Business Enquiries</div>
+                <div className="font-semibold text-[#080f1e]">info@rswaters.store</div>
               </a>
 
               <div className="p-5 bg-white border border-[#cce0f5] rounded-xl">
@@ -67,10 +67,10 @@ export default function Contact() {
                 Email our sales team and include your city, required product or service, and preferred contact number.
               </p>
               <a
-                href="mailto:sales@rswaters.store?subject=RS%20Waters%20Sales%20Enquiry"
+                href="mailto:info@rswaters.store?subject=RS%20Waters%20Sales%20Enquiry"
                 className="inline-flex px-5 py-2.5 bg-[#005fc5] rounded-lg text-sm font-bold hover:bg-[#004ea3] transition-colors"
               >
-                Email Sales
+                Email RS Waters
               </a>
             </div>
           </div>
