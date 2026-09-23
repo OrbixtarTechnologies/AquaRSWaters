@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";\nimport type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 type PolicySection = {
