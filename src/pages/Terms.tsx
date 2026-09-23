@@ -1,57 +1,63 @@
+import { Link } from "react-router-dom";
+import PolicyLayout from "../components/PolicyLayout";
+
 export default function Terms() {
-  const sections = [
-    {
-      title: "1. Website Purpose",
-      content: "rswaters.store is the official website of RS WATERS (PRIVATE) LIMITED. It provides company information, product-category information, service-enquiry information, and direct contact channels.",
-    },
-    {
-      title: "2. Availability & Pricing",
-      content: "Any product, service, price, delivery area, specification, or commercial term must be confirmed directly by RS Waters before you rely on it or place an order. Website content may be updated without prior notice.",
-    },
-    {
-      title: "3. Enquiries Are Not Confirmed Orders",
-      content: "Sending an email, WhatsApp message, phone enquiry, or other request does not by itself create a confirmed order or contract. RS Waters will confirm applicable terms separately.",
-    },
-    {
-      title: "4. Acceptable Use",
-      content: "You may not misuse this website, attempt unauthorized access, interfere with its operation, impersonate RS Waters, or use company branding in a misleading way.",
-    },
-    {
-      title: "5. Intellectual Property",
-      content: "Unless otherwise stated, RS Waters owns or is authorized to use the company-specific text, branding, and design elements presented on this website. Third-party images or services remain subject to their respective rights.",
-    },
-    {
-      title: "6. External Services",
-      content: "Links or contact actions may open third-party services such as WhatsApp, email clients, or telephone services. Those services operate under their own terms and privacy practices.",
-    },
-    {
-      title: "7. Governing Law",
-      content: "These website terms are governed by the applicable laws of Pakistan. Any dispute will be handled in the competent jurisdiction applicable to RS WATERS (PRIVATE) LIMITED.",
-    },
-    {
-      title: "8. Contact",
-      content: "Questions about these Terms can be sent to info@rswaters.store or discussed by phone at 0325-891-7527.",
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-[#f8fbff]">
-      <div className="bg-gradient-to-r from-[#002c6e] to-[#005fc5] text-white py-14 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-xs font-semibold text-[#7de8ff] uppercase tracking-widest mb-3">Legal</div>
-          <h1 className="text-4xl font-black" style={{ fontFamily: "Outfit, sans-serif" }}>Terms of Use</h1>
-          <p className="text-blue-100 mt-2 text-sm">Last updated: 22 September 2026 — RS WATERS (PRIVATE) LIMITED</p>
-        </div>
-      </div>
-
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-6">
-        {sections.map((section) => (
-          <section key={section.title} className="bg-white border border-[#cce0f5] rounded-xl p-6">
-            <h2 className="font-black text-[#080f1e] mb-2" style={{ fontFamily: "Outfit, sans-serif" }}>{section.title}</h2>
-            <p className="text-sm text-[#4a6080] leading-relaxed">{section.content}</p>
-          </section>
-        ))}
-      </div>
-    </div>
+    <PolicyLayout
+      title="Terms of Use"
+      description="These terms govern use of rswaters.store and online interactions with RS WATERS (PRIVATE) LIMITED."
+      sections={[
+        {
+          title: "1. Website operator",
+          content: <p><strong>rswaters.store</strong> is operated by <strong>RS WATERS (PRIVATE) LIMITED</strong>, with its listed head office at LDA 276, Shah Jamal Ichhra, Lahore, Pakistan.</p>,
+        },
+        {
+          title: "2. Website purpose",
+          content: <p>The website provides company information, product information, shopping and cart functionality, service information, and channels for contacting RS Waters. Website content is intended to help customers understand available products and submit enquiries or order requests.</p>,
+        },
+        {
+          title: "3. Product information, pricing, and availability",
+          content: <p>We aim to keep website product information useful and current, but product availability, specifications, pricing, stock, delivery area, and related commercial details can change. A cart total or website listing is not a guarantee that an item is available until RS Waters confirms the order and applicable delivery details.</p>,
+        },
+        {
+          title: "4. Orders and enquiries",
+          content: <p>Submitting a cart, WhatsApp message, email, phone request, or other enquiry does not by itself create a completed sale. RS Waters may confirm availability, delivery details, final amount, and any relevant terms with the customer before an order is accepted or fulfilled.</p>,
+        },
+        {
+          title: "5. Customer responsibilities",
+          content: <p>You are responsible for providing accurate contact, location, and order information and for using the website lawfully. You must not attempt unauthorized access, interfere with site operation, misuse company branding, submit fraudulent requests, or use the website in a way that harms RS Waters or other users.</p>,
+        },
+        {
+          title: "6. Delivery, returns, and cancellations",
+          content: (
+            <p>
+              Delivery and post-order matters are governed by our <Link className="font-semibold text-[#0a6e9c] hover:underline" to="/shipping-delivery">Shipping & Delivery Policy</Link>,{" "}
+              <Link className="font-semibold text-[#0a6e9c] hover:underline" to="/returns-refunds">Returns & Refunds Policy</Link>, and{" "}
+              <Link className="font-semibold text-[#0a6e9c] hover:underline" to="/cancellation">Cancellation Policy</Link>.
+            </p>
+          ),
+        },
+        {
+          title: "7. Third-party services",
+          content: <p>The website may link to or open third-party services such as WhatsApp, Meta services, email applications, maps, fonts, hosting infrastructure, or telephone services. Those services are operated by their respective providers and are subject to their own terms and privacy practices.</p>,
+        },
+        {
+          title: "8. Intellectual property",
+          content: <p>Unless otherwise stated, RS Waters owns or is authorized to use its business name, company-specific website text, branding, and design. Third-party photographs, fonts, platforms, trademarks, and services remain subject to the rights of their respective owners.</p>,
+        },
+        {
+          title: "9. Website availability and accuracy",
+          content: <p>We may update, suspend, correct, or change website content and functionality. To the extent permitted by applicable law, RS Waters does not guarantee uninterrupted access to the website or that every third-party resource will always remain available.</p>,
+        },
+        {
+          title: "10. Applicable law",
+          content: <p>These Terms are governed by the applicable laws of Pakistan. Nothing in these Terms is intended to remove rights or remedies that cannot legally be excluded.</p>,
+        },
+        {
+          title: "11. Changes",
+          content: <p>We may update these Terms when the website, products, ordering process, or business practices change. The current version will be published on this page with its update date.</p>,
+        },
+      ]}
+    />
   );
 }
