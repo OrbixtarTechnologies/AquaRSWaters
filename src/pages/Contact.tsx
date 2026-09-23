@@ -13,13 +13,13 @@ export default function Contact() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 grid md:grid-cols-2 gap-10">
         <div className="space-y-4">
-          <a href="tel:+923117792837" className="block p-6 bg-white border border-[#cce0f5] rounded-xl hover:shadow-md hover:border-[#005fc5]/40 transition-all">
+          <a href="tel:+923258917527" className="block p-6 bg-white border border-[#cce0f5] rounded-xl hover:shadow-md hover:border-[#005fc5]/40 transition-all">
             <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-wider mb-1">Call</div>
-            <div className="text-lg font-black text-[#080f1e]">0311-779-2837</div>
+            <div className="text-lg font-black text-[#080f1e]">0325-891-7527</div>
             <div className="text-sm text-[#4a6080] mt-1">Talk to our team about products, supply, or service requirements.</div>
           </a>
 
-          <a href="https://wa.me/923117792837" target="_blank" rel="noreferrer" className="block p-6 bg-white border border-[#cce0f5] rounded-xl hover:shadow-md hover:border-[#005fc5]/40 transition-all">
+          <a href="https://wa.me/923258917527" target="_blank" rel="noreferrer" className="block p-6 bg-white border border-[#cce0f5] rounded-xl hover:shadow-md hover:border-[#005fc5]/40 transition-all">
             <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-wider mb-1">WhatsApp</div>
             <div className="text-lg font-black text-[#080f1e]">Message RS Waters</div>
             <div className="text-sm text-[#4a6080] mt-1">Send your city and requirement for a quicker response.</div>
