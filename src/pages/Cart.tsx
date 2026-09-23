@@ -82,7 +82,7 @@ function OrderForm({ items, total }: { items: any[]; total: number }) {
       "Please confirm availability, delivery, and final amount.",
     ].join("\n");
 
-    window.open(`https://wa.me/923117792837?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/923258917527?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   };
 
   return (
