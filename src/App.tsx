@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
+
+import { CartProvider } from "./context/CartContext";
 import { useLenis } from "./hooks/useLenis";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,6 +14,7 @@ import Products from "./pages/Products";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
@@ -40,6 +43,7 @@ function AppShell() {
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
@@ -53,7 +57,9 @@ function AppShell() {
 export default function App() {
   return (
     <BrowserRouter>
-      <AppShell />
+      <CartProvider>
+        <AppShell />
+      </CartProvider>
     </BrowserRouter>
   );
 }

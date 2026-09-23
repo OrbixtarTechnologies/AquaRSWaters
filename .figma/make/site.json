@@ -1,7 +1,9 @@
 {
-  "description": "Offers a modern platform for purchasing filtered water, filtration systems, and water-related products with online ordering tailored for the Pakistani market.",
+  "title": "RS Waters | Water Products & Solutions in Pakistan",
+  "description": "Shop drinking-water products, dispensers and filtration systems from RS Waters, with customer and business support across selected cities in Pakistan.",
+  "language": "en",
   "robots": {
-    "index": false
+    "index": true
   },
   "accessibility": {
     "addBypassLinks": false,
