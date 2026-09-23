@@ -30,7 +30,7 @@ export default function Terms() {
     },
     {
       title: "8. Contact",
-      content: "Questions about these Terms can be sent to info@rswaters.store or discussed by phone at 0311-779-2837.",
+      content: "Questions about these Terms can be sent to info@rswaters.store or discussed by phone at 0325-891-7527.",
     },
   ];
 
