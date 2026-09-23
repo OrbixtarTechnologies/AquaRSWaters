@@ -31,7 +31,7 @@ Basic technical information may also be processed by our hosting provider or bro
       content: `RS WATERS (PRIVATE) LIMITED
 LDA 276, Shah Jamal Ichhra, Lahore, Pakistan
 Email: info@rswaters.store
-Phone: 0311-779-2837`,
+Phone: 0325-891-7527`,
     },
   ];
 
