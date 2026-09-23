@@ -1,7 +1,13 @@
 export default function About() {
+  const facts = [
+    { value: "10 Nov 2021", label: "Established" },
+    { value: "6", label: "Service Cities" },
+    { value: "Lahore", label: "Head Office" },
+    { value: "Direct", label: "Customer Support" },
+  ];
+
   return (
     <div className="min-h-screen bg-[#f8fbff]">
-      {/* Hero */}
       <div className="relative bg-gradient-to-r from-[#002c6e] to-[#005fc5] text-white py-16 px-4 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
@@ -12,30 +18,31 @@ export default function About() {
           }}
         />
         <div className="relative max-w-4xl mx-auto text-center">
-          <div className="text-xs font-semibold text-[#00b4d8] uppercase tracking-widest mb-3">Our Story</div>
-          <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Outfit, sans-serif" }}>About AquaRS</h1>
-          <p className="text-blue-200 text-base max-w-xl mx-auto">
-            Born out of a vision to provide every Pakistani household with access to certified pure water.
+          <div className="text-xs font-semibold text-[#7de8ff] uppercase tracking-widest mb-3">Company Profile</div>
+          <h1 className="text-4xl md:text-5xl font-black mb-4" style={{ fontFamily: "Outfit, sans-serif" }}>
+            RS WATERS (PRIVATE) LIMITED
+          </h1>
+          <p className="text-blue-100 text-base max-w-2xl mx-auto">
+            A Pakistan-based water solutions company established on 10 November 2021, with its head office in Lahore.
           </p>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 space-y-16">
-        {/* Story */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 space-y-14">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-widest mb-3">The Beginning</div>
+            <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-widest mb-3">Who We Are</div>
             <h2 className="text-3xl font-black text-[#080f1e] mb-4" style={{ fontFamily: "Outfit, sans-serif" }}>
-              Purity Is Our Promise
+              Clear company identity. Direct customer contact.
             </h2>
             <p className="text-[#4a6080] leading-relaxed mb-4">
-              AquaRS was founded under RS Waters Private Limited with a single mission: to make safe, clean, and mineral-rich water accessible to every home, office, and factory in Pakistan.
-            </p>
-            <p className="text-[#4a6080] leading-relaxed mb-4">
-              Over the years, we've grown from a local delivery service into a comprehensive water solutions company — offering everything from 500ml bottles to industrial filtration plant installations.
+              RS Waters operates under the legal name <strong className="text-[#080f1e]">RS WATERS (PRIVATE) LIMITED</strong>.
+              This website, rswaters.store, is the company's official online presence for product information, service enquiries,
+              customer support, and contact with our team.
             </p>
             <p className="text-[#4a6080] leading-relaxed">
-              We are proud to be backed by RS Waters Private Limited, a trusted name in the water industry, ensuring the highest standards in quality control and customer service.
+              Our listed service coverage includes Lahore, Islamabad, Multan, Peshawar, Quetta, and Faisalabad.
+              Customers can contact us directly by phone, WhatsApp, or company-domain email.
             </p>
           </div>
           <div
@@ -45,74 +52,53 @@ export default function About() {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
+            role="img"
+            aria-label="Water solutions"
           />
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { val: "2014", label: "Founded" },
-            { val: "50,000+", label: "Customers Served" },
-            { val: "20+", label: "Cities" },
-            { val: "99.9%", label: "Purity Rate" },
-          ].map((s) => (
-            <div key={s.label} className="bg-white border border-[#cce0f5] rounded-xl p-6 text-center">
-              <div className="text-3xl font-black text-[#005fc5] mb-1" style={{ fontFamily: "Outfit, sans-serif" }}>{s.val}</div>
-              <div className="text-sm text-[#4a6080]">{s.label}</div>
+          {facts.map((item) => (
+            <div key={item.label} className="bg-white border border-[#cce0f5] rounded-xl p-6 text-center">
+              <div className="text-2xl md:text-3xl font-black text-[#005fc5] mb-1" style={{ fontFamily: "Outfit, sans-serif" }}>
+                {item.value}
+              </div>
+              <div className="text-sm text-[#4a6080]">{item.label}</div>
             </div>
           ))}
         </div>
 
-        {/* Values */}
-        <div>
-          <div className="text-center mb-10">
-            <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-widest mb-2">Our Values</div>
-            <h2 className="text-3xl font-black text-[#080f1e]" style={{ fontFamily: "Outfit, sans-serif" }}>
-              What We Stand For
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: "💎",
-                title: "Quality First",
-                desc: "Every product we sell undergoes rigorous multi-stage testing. Our water meets and exceeds PSQCA standards.",
-              },
-              {
-                icon: "🤝",
-                title: "Trust & Transparency",
-                desc: "We believe in honest pricing, clear policies, and no hidden charges. What you see is what you get.",
-              },
-              {
-                icon: "🌿",
-                title: "Sustainability",
-                desc: "We invest in eco-friendly packaging, reusable gallons, and energy-efficient filtration to protect Pakistan's future.",
-              },
-            ].map((v) => (
-              <div key={v.title} className="bg-white border border-[#cce0f5] rounded-xl p-6">
-                <div className="text-3xl mb-3">{v.icon}</div>
-                <h3 className="font-black text-[#080f1e] mb-2" style={{ fontFamily: "Outfit, sans-serif" }}>{v.title}</h3>
-                <p className="text-sm text-[#4a6080] leading-relaxed">{v.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* RS Waters note */}
-        <div className="bg-gradient-to-r from-[#e8f2ff] to-[#f0f7ff] border border-[#cce0f5] rounded-2xl p-8 flex flex-col md:flex-row gap-6 items-center">
-          <div className="w-16 h-16 shrink-0 rounded-2xl bg-[#005fc5] flex items-center justify-center">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2C8 8 5 12 5 15.5a7 7 0 0014 0C19 12 16 8 12 2z" fill="white" opacity="0.9"/>
-              <path d="M12 8C10 11 9 13 9 15a3 3 0 006 0c0-2-1-4-3-7z" fill="white" opacity="0.4"/>
-            </svg>
-          </div>
-          <div>
-            <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-widest mb-1">Parent Company</div>
-            <h3 className="text-xl font-black text-[#080f1e] mb-1" style={{ fontFamily: "Outfit, sans-serif" }}>RS WATERS (PRIVATE) LIMITED</h3>
-            <p className="text-sm text-[#4a6080] leading-relaxed">
-              AquaRS is proudly operated under RS WATERS (PRIVATE) LIMITED — a registered and licensed company committed to delivering safe water solutions across Pakistan. Our infrastructure, cold chain, and quality labs are owned and operated in-house.
-            </p>
-          </div>
+        <div className="bg-white border border-[#cce0f5] rounded-2xl p-8">
+          <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-widest mb-2">Business Information</div>
+          <h2 className="text-2xl font-black text-[#080f1e] mb-6" style={{ fontFamily: "Outfit, sans-serif" }}>
+            Official Contact Details
+          </h2>
+          <dl className="grid md:grid-cols-2 gap-x-10 gap-y-5 text-sm">
+            <div>
+              <dt className="text-[#4a6080]">Legal business name</dt>
+              <dd className="font-semibold text-[#080f1e]">RS WATERS (PRIVATE) LIMITED</dd>
+            </div>
+            <div>
+              <dt className="text-[#4a6080]">Established</dt>
+              <dd className="font-semibold text-[#080f1e]">10 November 2021</dd>
+            </div>
+            <div>
+              <dt className="text-[#4a6080]">Head office</dt>
+              <dd className="font-semibold text-[#080f1e]">LDA 276, Shah Jamal Ichhra, Lahore, Pakistan</dd>
+            </div>
+            <div>
+              <dt className="text-[#4a6080]">Phone</dt>
+              <dd><a href="tel:+923117792837" className="font-semibold text-[#005fc5] hover:underline">0311-779-2837</a></dd>
+            </div>
+            <div>
+              <dt className="text-[#4a6080]">General email</dt>
+              <dd><a href="mailto:info@rswaters.store" className="font-semibold text-[#005fc5] hover:underline">info@rswaters.store</a></dd>
+            </div>
+            <div>
+              <dt className="text-[#4a6080]">Sales email</dt>
+              <dd><a href="mailto:sales@rswaters.store" className="font-semibold text-[#005fc5] hover:underline">sales@rswaters.store</a></dd>
+            </div>
+          </dl>
         </div>
       </div>
     </div>
