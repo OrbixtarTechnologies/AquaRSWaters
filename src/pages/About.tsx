@@ -96,7 +96,7 @@ export default function About() {
             </div>
             <div>
               <dt className="text-[#4a6080]">Sales email</dt>
-              <dd><a href="mailto:sales@rswaters.store" className="font-semibold text-[#005fc5] hover:underline">sales@rswaters.store</a></dd>
+              <dd><a href="mailto:info@rswaters.store" className="font-semibold text-[#005fc5] hover:underline">info@rswaters.store</a></dd>
             </div>
           </dl>
         </div>
