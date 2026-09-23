@@ -50,7 +50,7 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-sm uppercase tracking-wider text-[#00b4d8] mb-4" style={{ fontFamily: "Outfit, sans-serif" }}>Contact</h4>
           <div className="space-y-3 text-sm text-[#8aa0b8]">
-            <a href="tel:+923117792837" className="block hover:text-white transition-colors">0311-779-2837</a>
+            <a href="tel:+923258917527" className="block hover:text-white transition-colors">0325-891-7527</a>
             <a href="mailto:info@rswaters.store" className="block hover:text-white transition-colors">info@rswaters.store</a>
             <address className="not-italic leading-relaxed">LDA 276, Shah Jamal Ichhra,<br/>Lahore, Pakistan</address>
           </div>
