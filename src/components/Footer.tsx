@@ -61,7 +61,7 @@ export default function Footer() {
           <div className="space-y-3 text-sm text-[#8aa0b8]">
             <a href="tel:+923117792837" className="block hover:text-white transition-colors">0311-779-2837</a>
             <a href="mailto:info@rswaters.store" className="block hover:text-white transition-colors">info@rswaters.store</a>
-            <a href="mailto:sales@rswaters.store" className="block hover:text-white transition-colors">sales@rswaters.store</a>
+            <a href="mailto:info@rswaters.store" className="block hover:text-white transition-colors">info@rswaters.store</a>
             <address className="not-italic leading-relaxed">
               LDA 276, Shah Jamal Ichhra,<br />Lahore, Pakistan
             </address>
