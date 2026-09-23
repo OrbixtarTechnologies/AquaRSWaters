@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#cce0f5]">
       <div className="bg-[#005fc5] text-white text-xs py-1.5 px-4 flex justify-between items-center">
         <span>Water products & solutions across selected cities in Pakistan</span>
-        <a href="tel:+923117792837" className="hidden sm:block hover:underline">0311-779-2837</a>
+        <a href="tel:+923258917527" className="hidden sm:block hover:underline">0325-891-7527</a>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
