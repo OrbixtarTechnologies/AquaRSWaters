@@ -15,8 +15,14 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Policies from "./pages/Policies";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import DataDeletion from "./pages/DataDeletion";
+import ShippingDelivery from "./pages/ShippingDelivery";
+import ReturnsRefunds from "./pages/ReturnsRefunds";
+import Cancellation from "./pages/Cancellation";
+import CookiePolicy from "./pages/CookiePolicy";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,8 +50,15 @@ function AppShell() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
+
+          <Route path="/policies" element={<Policies />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/data-deletion" element={<DataDeletion />} />
+          <Route path="/shipping-delivery" element={<ShippingDelivery />} />
+          <Route path="/returns-refunds" element={<ReturnsRefunds />} />
+          <Route path="/cancellation" element={<Cancellation />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
         </Routes>
       </main>
       <Footer />
