@@ -2,156 +2,128 @@ import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import { useCart } from "../context/CartContext";
 
-const serviceAreas = ["Lahore", "Islamabad", "Multan", "Peshawar", "Quetta", "Faisalabad"];
+const categories = [
+  { title: "Drinking Water", copy: "Bottled water and 19L gallons for homes, offices, events, and everyday use.", link: "/products" },
+  { title: "Water Dispensers", copy: "Hot and cold dispensing options designed for convenient home and workplace use.", link: "/products" },
+  { title: "Filtration Systems", copy: "RO, UV, replacement filters, and water-treatment equipment for different requirements.", link: "/products" },
+];
 
 export default function Home() {
   const { addToCart } = useCart();
   const featuredProducts = products.slice(0, 4);
 
   return (
-    <div>
-      <section className="relative overflow-hidden text-white bg-[#001228]">
+    <div className="bg-white">
+      <section className="relative min-h-[620px] overflow-hidden bg-[#031a33] text-white">
         <img
-          src="https://images.unsplash.com/photo-1514747975201-4715db583da9?w=1600&h=900&fit=crop&auto=format&q=80"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-55"
+          src="https://images.unsplash.com/photo-1564419320461-6870880221ad?w=1800&h=1000&fit=crop&auto=format&q=85"
+          alt="Fresh drinking water"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-55"
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(105deg, rgba(0,18,40,.93) 0%, rgba(0,54,118,.74) 52%, rgba(0,18,40,.45) 100%)" }} />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-[#00b4d8]/20 border border-[#00b4d8]/40 rounded-full px-4 py-1.5 text-xs font-semibold mb-6 tracking-wide text-[#7de8ff]">
-              Water products • filtration • supply solutions
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.03] mb-6" style={{ fontFamily: "Outfit, sans-serif" }}>
-              Pure water for
-              <br />
-              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(90deg,#38d9f5,#b9f4ff)" }}>
-                everyday life.
-              </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#031a33] via-[#063d70]/90 to-[#063d70]/20" />
+        <div className="relative mx-auto grid min-h-[620px] max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.05fr_.95fr]">
+          <div className="max-w-2xl">
+            <p className="mb-4 text-sm font-bold uppercase tracking-[.22em] text-[#77ddff]">RS Waters</p>
+            <h1 className="mb-6 text-5xl font-black leading-[1.02] md:text-7xl" style={{ fontFamily: "Outfit, sans-serif" }}>
+              Water for home,
+              <br />work & everyday life.
             </h1>
-            <p className="text-base md:text-lg leading-relaxed mb-8 max-w-xl text-[#c8e6f7]">
-              RS Waters supplies drinking-water products and water-solution equipment for homes, offices, and business requirements across selected Pakistani cities.
+            <p className="mb-8 max-w-xl text-lg leading-8 text-[#d9efff]">
+              Shop drinking water, dispensers, filtration systems and accessories, or talk to our team about regular and business water requirements.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/products" className="px-7 py-3 rounded-xl text-sm font-bold bg-gradient-to-r from-[#38d9f5] to-[#005fc5] shadow-lg shadow-[#00b4d8]/25 hover:scale-[1.02] transition-transform">
-                Shop Products
-              </Link>
-              <Link to="/services" className="px-7 py-3 border border-white/35 text-white font-semibold rounded-xl hover:bg-white/10 transition-colors text-sm">
-                Explore Services
-              </Link>
+              <Link to="/products" className="rounded-xl bg-[#00aee8] px-7 py-3.5 text-sm font-bold text-white shadow-lg hover:bg-[#0098cb]">Shop Products</Link>
+              <a href="https://wa.me/923117792837" target="_blank" rel="noreferrer" className="rounded-xl border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-bold backdrop-blur hover:bg-white/20">Order on WhatsApp</a>
             </div>
-          </div>
-
-          <div className="hidden md:flex justify-center">
-            <div className="relative w-[390px] h-[390px] flex items-center justify-center">
-              <div className="absolute inset-2 rounded-full border border-dashed border-[#7de8ff]/20" />
-              <div className="absolute inset-14 rounded-full border border-[#7de8ff]/15" />
-              <div className="relative w-56 h-56 rounded-full flex flex-col items-center justify-center"
-                style={{ background: "radial-gradient(circle at 35% 30%,rgba(125,232,255,.55),rgba(0,95,197,.78) 52%,rgba(0,26,77,.96))", boxShadow: "0 0 80px rgba(0,180,216,.32)" }}>
-                <svg width="62" height="62" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2C8 8 5 12 5 15.5a7 7 0 0014 0C19 12 16 8 12 2z" fill="white" opacity=".95"/>
-                  <path d="M12 8C10 11 9 13 9 15a3 3 0 006 0c0-2-1-4-3-7z" fill="white" opacity=".35"/>
-                </svg>
-                <div className="mt-3 font-black tracking-wider" style={{ fontFamily: "Outfit, sans-serif" }}>RS WATERS</div>
-              </div>
-              <div className="absolute top-7 right-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3">
-                <div className="text-[10px] text-[#7de8ff] uppercase tracking-wider">For</div>
-                <div className="font-bold">Home & Office</div>
-              </div>
-              <div className="absolute bottom-10 left-0 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-3">
-                <div className="text-[10px] text-[#7de8ff] uppercase tracking-wider">Solutions</div>
-                <div className="font-bold">Supply & Filtration</div>
-              </div>
+            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-sm text-[#c6deef]">
+              <span>Home & office supply</span><span>Filtration solutions</span><span>Business enquiries</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#f0f7ff]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-11">
-            <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-widest mb-2">Why RS Waters</div>
-            <h2 className="text-3xl md:text-4xl font-black text-[#080f1e]" style={{ fontFamily: "Outfit, sans-serif" }}>Simple water solutions, built around your needs</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              ["Water Supply", "Options for household, office, and larger recurring requirements."],
-              ["Filtration Systems", "Water filtration equipment for different spaces and use cases."],
-              ["Business Enquiries", "Direct support for bulk, commercial, and institutional requirements."],
-              ["Local Support", "Phone, WhatsApp, and company-domain email for customer communication."],
-            ].map(([title, text]) => (
-              <div key={title} className="bg-white rounded-xl p-6 border border-[#cce0f5] hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-lg bg-[#e8f2ff] mb-4 flex items-center justify-center text-[#005fc5] font-black">✓</div>
-                <h3 className="font-bold text-[#080f1e] mb-2" style={{ fontFamily: "Outfit, sans-serif" }}>{title}</h3>
-                <p className="text-sm text-[#4a6080] leading-relaxed">{text}</p>
-              </div>
-            ))}
-          </div>
+      <section className="border-b border-[#e3eef8] bg-[#f7fbff]">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px px-4 py-6 sm:px-6 md:grid-cols-4">
+          {[
+            ["0311-779-2837", "Call RS Waters"],
+            ["WhatsApp", "Quick order enquiry"],
+            ["6 Cities", "Current service network"],
+            ["Lahore", "Head office"],
+          ].map(([value, label]) => (
+            <div key={value} className="px-4 py-3 text-center">
+              <div className="font-black text-[#07396b]" style={{ fontFamily: "Outfit, sans-serif" }}>{value}</div>
+              <div className="mt-1 text-xs text-[#637b91]">{label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-end justify-between mb-10">
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
+        <div className="mb-10 max-w-2xl">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0077c8]">Shop by need</p>
+          <h2 className="text-3xl font-black text-[#071727] md:text-4xl" style={{ fontFamily: "Outfit, sans-serif" }}>Everything you need for better water access</h2>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {categories.map((item, i) => (
+            <Link key={item.title} to={item.link} className="group relative min-h-64 overflow-hidden rounded-2xl bg-[#eaf6ff] p-7">
+              <div className="absolute -bottom-14 -right-12 h-48 w-48 rounded-full bg-[#56cfff]/20 transition-transform group-hover:scale-125" />
+              <div className="relative">
+                <div className="mb-12 text-sm font-black text-[#0099d7]">0{i + 1}</div>
+                <h3 className="mb-3 text-2xl font-black text-[#071727]" style={{ fontFamily: "Outfit, sans-serif" }}>{item.title}</h3>
+                <p className="max-w-sm text-sm leading-6 text-[#536b80]">{item.copy}</p>
+                <span className="mt-6 inline-block text-sm font-bold text-[#006bb3]">Explore products →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-[#f7fbff] py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mb-10 flex items-end justify-between gap-4">
             <div>
-              <div className="text-xs font-semibold text-[#005fc5] uppercase tracking-widest mb-2">Featured</div>
-              <h2 className="text-3xl md:text-4xl font-black text-[#080f1e]" style={{ fontFamily: "Outfit, sans-serif" }}>Popular Products</h2>
+              <p className="mb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0077c8]">Featured products</p>
+              <h2 className="text-3xl font-black text-[#071727] md:text-4xl" style={{ fontFamily: "Outfit, sans-serif" }}>Popular picks</h2>
             </div>
-            <Link to="/products" className="text-sm font-semibold text-[#005fc5] hover:underline">View all →</Link>
+            <Link to="/products" className="text-sm font-bold text-[#006bb3]">View all products →</Link>
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {featuredProducts.map((p) => (
-              <div key={p.id} className="group bg-white border border-[#cce0f5] rounded-xl overflow-hidden hover:shadow-lg hover:border-[#005fc5]/35 transition-all">
-                <div className="relative h-48 bg-[#f0f7ff] overflow-hidden">
-                  {p.badge && <span className="absolute top-3 left-3 z-10 px-2.5 py-1 text-xs font-bold bg-[#005fc5] text-white rounded-full">{p.badge}</span>}
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="p-4">
-                  <div className="text-xs text-[#4a6080] mb-1">{p.category}</div>
-                  <h3 className="font-bold text-[#080f1e] text-sm leading-snug mb-3" style={{ fontFamily: "Outfit, sans-serif" }}>{p.name}</h3>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-lg font-black text-[#005fc5]">Rs. {p.price.toLocaleString()}</span>
-                      <span className="text-xs text-[#4a6080] ml-1">{p.unit}</span>
-                    </div>
-                    <button onClick={() => addToCart(p)} className="px-3 py-1.5 bg-[#005fc5] text-white text-xs font-semibold rounded-lg hover:bg-[#004ea3] transition-colors">Add</button>
+              <article key={p.id} className="overflow-hidden rounded-2xl border border-[#dbe9f4] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <div className="h-52 overflow-hidden bg-[#eef8ff]"><img src={p.image} alt={p.name} className="h-full w-full object-cover transition duration-500 hover:scale-105" /></div>
+                <div className="p-5">
+                  <p className="mb-1 text-xs font-semibold text-[#0077c8]">{p.category}</p>
+                  <h3 className="min-h-10 text-sm font-bold text-[#071727]">{p.name}</h3>
+                  <div className="mt-5 flex items-end justify-between gap-3">
+                    <div><div className="text-lg font-black text-[#006bb3]">Rs. {p.price.toLocaleString()}</div><div className="text-xs text-[#71879a]">{p.unit}</div></div>
+                    <button onClick={() => addToCart(p)} className="rounded-lg bg-[#07396b] px-4 py-2 text-xs font-bold text-white hover:bg-[#005a9c]">Add to Cart</button>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#080f1e] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="text-xs font-semibold text-[#00b4d8] uppercase tracking-widest mb-3">For Business</div>
-            <h2 className="text-3xl md:text-4xl font-black leading-tight mb-5" style={{ fontFamily: "Outfit, sans-serif" }}>
-              Water requirements beyond the everyday?
-            </h2>
-            <p className="text-[#8aa0b8] leading-relaxed mb-7">
-              Speak with RS Waters about recurring supply, office requirements, filtration equipment, or larger commercial needs. We will confirm the options available for your city and requirement.
-            </p>
-            <Link to="/contact" className="inline-flex px-6 py-3 bg-[#005fc5] text-white font-bold rounded-lg hover:bg-[#004ea3] transition-colors text-sm">Discuss Your Requirement →</Link>
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center">
+        <div className="overflow-hidden rounded-3xl">
+          <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=1000&h=750&fit=crop&auto=format&q=80" alt="Water service" className="h-[430px] w-full object-cover" />
+        </div>
+        <div className="lg:pl-8">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[.2em] text-[#0077c8]">For offices & businesses</p>
+          <h2 className="mb-5 text-4xl font-black leading-tight text-[#071727]" style={{ fontFamily: "Outfit, sans-serif" }}>Need water supply on a regular basis?</h2>
+          <p className="mb-7 leading-7 text-[#536b80]">Tell us your city, quantity and requirement. RS Waters can discuss recurring supply, dispensers, filtration equipment and larger commercial needs directly with your team.</p>
+          <div className="mb-8 grid grid-cols-2 gap-3 text-sm font-semibold text-[#29465f]">
+            {["Lahore","Islamabad","Multan","Peshawar","Quetta","Faisalabad"].map(city => <div key={city} className="rounded-lg bg-[#f3f8fc] px-4 py-3">{city}</div>)}
           </div>
-          <div className="grid grid-cols-2 gap-3">
-            {serviceAreas.map((city) => <div key={city} className="rounded-xl border border-white/10 bg-white/5 p-5 font-semibold text-[#c8d8e8]">{city}</div>)}
-          </div>
+          <Link to="/contact" className="inline-flex rounded-xl bg-[#0077c8] px-6 py-3 text-sm font-bold text-white hover:bg-[#0066ad]">Business Enquiry</Link>
         </div>
       </section>
 
-      <section className="py-14 bg-gradient-to-r from-[#005fc5] to-[#00b4d8] text-white text-center">
-        <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-black mb-3" style={{ fontFamily: "Outfit, sans-serif" }}>Need help choosing the right option?</h2>
-          <p className="text-blue-100 mb-7">Call, WhatsApp, or email RS Waters and tell us what you need.</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <a href="tel:+923117792837" className="px-7 py-3 bg-white text-[#005fc5] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">Call 0311-779-2837</a>
-            <Link to="/contact" className="px-7 py-3 border border-white/50 text-white font-medium rounded-lg hover:bg-white/10 transition-colors text-sm">Contact Us</Link>
-          </div>
+      <section className="bg-[#07396b] text-white">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">
+          <div><h2 className="text-3xl font-black" style={{ fontFamily: "Outfit, sans-serif" }}>Need help with an order?</h2><p className="mt-2 text-[#c8e4f7]">Talk directly with RS Waters for product availability and delivery enquiries.</p></div>
+          <div className="flex flex-wrap gap-3"><a href="tel:+923117792837" className="rounded-xl bg-white px-6 py-3 text-sm font-bold text-[#07396b]">Call 0311-779-2837</a><a href="https://wa.me/923117792837" target="_blank" rel="noreferrer" className="rounded-xl border border-white/35 px-6 py-3 text-sm font-bold text-white">WhatsApp Us</a></div>
         </div>
       </section>
     </div>
