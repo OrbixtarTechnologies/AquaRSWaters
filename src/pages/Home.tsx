@@ -90,7 +90,7 @@ export default function Home() {
                 Shop products <ArrowIcon />
               </Link>
               <a
-                href="https://wa.me/923117792837"
+                href="https://wa.me/923258917527"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#bcdbe8] bg-white/85 px-6 py-3 text-sm font-bold text-[#0a628c] shadow-[0_10px_28px_rgba(5,63,91,.06)] backdrop-blur transition hover:-translate-y-0.5 hover:border-[#8bc9df] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0d8fcf]"
@@ -172,7 +172,7 @@ export default function Home() {
       <section className="border-b border-[#dbeaf1] bg-white">
         <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-[#e5f0f5] px-5 sm:px-8 md:grid-cols-4 md:divide-y-0">
           {[
-            ["0311-779-2837", "Customer line"],
+            ["0325-891-7527", "Customer line"],
             ["WhatsApp", "Quick ordering"],
             ["6 cities", "Current coverage"],
             ["Lahore", "Head office"],
@@ -340,10 +340,10 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-6 text-[#647e8f]">Reach our team directly by phone, WhatsApp, or email.</p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <a href="tel:+923117792837" className="rounded-xl bg-[#071b2b] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#0b304a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0d8fcf]">
-                  0311-779-2837
+                <a href="tel:+923258917527" className="rounded-xl bg-[#071b2b] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#0b304a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0d8fcf]">
+                  0325-891-7527
                 </a>
-                <a href="https://wa.me/923117792837" target="_blank" rel="noreferrer" className="rounded-xl border border-[#b9d7e3] bg-[#f7fbfd] px-5 py-3 text-sm font-bold text-[#0a6e9c] transition hover:bg-[#eef8fb] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0d8fcf]">
+                <a href="https://wa.me/923258917527" target="_blank" rel="noreferrer" className="rounded-xl border border-[#b9d7e3] bg-[#f7fbfd] px-5 py-3 text-sm font-bold text-[#0a6e9c] transition hover:bg-[#eef8fb] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0d8fcf]">
                   WhatsApp us
                 </a>
               </div>
