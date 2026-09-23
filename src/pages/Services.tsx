@@ -51,8 +51,8 @@ export default function Services() {
             Include your city, expected quantity or requirement, and preferred contact number so our team can respond accurately.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <a href="mailto:sales@rswaters.store?subject=RS%20Waters%20Service%20Enquiry" className="px-6 py-3 bg-[#005fc5] text-white font-bold rounded-lg hover:bg-[#004ea3] transition-colors text-sm">
-              Email Sales
+            <a href="mailto:info@rswaters.store?subject=RS%20Waters%20Service%20Enquiry" className="px-6 py-3 bg-[#005fc5] text-white font-bold rounded-lg hover:bg-[#004ea3] transition-colors text-sm">
+              Email RS Waters
             </a>
             <Link to="/contact" className="px-6 py-3 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-colors text-sm">
               Contact Details
