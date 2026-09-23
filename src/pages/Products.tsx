@@ -39,10 +39,10 @@ export default function Products() {
               <h2 className="text-xl font-black text-[#080f1e] mb-3" style={{ fontFamily: "Outfit, sans-serif" }}>{item.title}</h2>
               <p className="text-sm text-[#4a6080] leading-relaxed mb-5">{item.description}</p>
               <a
-                href={`mailto:sales@rswaters.store?subject=${encodeURIComponent(`RS Waters enquiry: ${item.title}`)}`}
+                href={`mailto:info@rswaters.store?subject=${encodeURIComponent(`RS Waters enquiry: ${item.title}`)}`}
                 className="inline-flex text-sm font-bold text-[#005fc5] hover:underline"
               >
-                Ask Sales About This Category →
+                Ask RS Waters About This Category →
               </a>
             </div>
           ))}
